@@ -3,8 +3,8 @@ import '@/styles/global.css';
 import { ViewTransitions } from 'astro:transitions';
 interface Props {
     title:string;
-    descripcion: string,
-    image: string
+    descripcion?: string,
+    image?: string
 }
 const {title, descripcion = "Nuestro blog de astro", image = "/assets/image1.jpg"} = Astro.props;
 ---
