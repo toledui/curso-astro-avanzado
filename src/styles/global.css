@@ -1,0 +1,30 @@
+/* Register your custom font family and tell the browser where to find it. */
+@font-face {
+    font-family: 'ProductSans';
+    src: url('/fonts/ProductSans-Bold.ttf') format('ttf');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+@font-face {
+    font-family: 'ProductSans';
+    src: url('/fonts/ProductSans-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+@font-face {
+    font-family: 'ProductSans';
+    src: url('/fonts/ProductSans-Medium.ttf') format('ttf');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+@font-face {
+    font-family: 'ProductSans';
+    src: url('/fonts/ProductSans-Light.ttf') format('ttf');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+

@@ -1,0 +1,44 @@
+---
+import '@/styles/global.css';
+import { ViewTransitions } from 'astro:transitions';
+interface Props {
+    title:string;
+    descripcion: string,
+    image: string
+}
+const {title, descripcion = "Nuestro blog de astro", image = "/assets/image1.jpg"} = Astro.props;
+---
+
+<head>
+    <!-- Global metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
+    <!-- Font preload -->
+     <link rel="preload" href="/fonts/ProductSans-Bold.ttf" as="font" type="font/ttf" crossorigin/>
+     <link rel="preload" href="/fonts/ProductSans-Regular.ttf" as="font" type="font/ttf" crossorigin/>
+     <link rel="preload" href="/fonts/ProductSans-Medium.ttf" as="font" type="font/ttf" crossorigin/>
+     <link rel="preload" href="/fonts/ProductSans-Light.ttf" as="font" type="font/ttf" crossorigin/>
+
+     <!-- Primary meta tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={descripcion} />
+
+    <!-- Opengraph -->
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={descripcion} />
+    <meta property="og:image" content={new URL(image, Astro.url)} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={descripcion} />
+    <meta property="twitter:image" content={new URL(image, Astro.url)} />
+
+    <ViewTransitions></ViewTransitions>
+</head>
